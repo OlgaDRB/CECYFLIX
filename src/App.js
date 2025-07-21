@@ -11,7 +11,7 @@ const [modoDescripcion, setModoDescripcion] = useState(false);
 const [recomendacion, setRecomendacion] = useState('');
 
 useEffect(() => {
-fetch('/api/peliculas')
+fetch('https://recomendaciones-backend.onrender.com/api/peliculas')
  .then(res => res.json())
  .then(data => {
    console.log('holadatos'+data);
@@ -37,7 +37,7 @@ setRecomendacion('');
 
 const handleBuscarPorDescripcion = async () => {
 try {
-const res = await fetch('/api/recomendaciones', {
+const res = await fetch('https://recomendaciones-backend.onrender.com/api/recomendaciones', {
 method: 'POST',
 headers: { 'Content-Type': 'application/json' },
 body: JSON.stringify({ prompt: `Dame una recomendación basada en esta descripción:
