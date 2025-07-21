@@ -7,7 +7,7 @@ function App() {
 const [peliculas, setPeliculas] = useState([]);
 const [peliculasFiltradas, setPeliculasFiltradas] = useState([]);
 const [busqueda, setBusqueda] = useState('');
-const [modoDescripcion, setModoDescripcion] = useState(false);
+//const [modoDescripcion, setModoDescripcion] = useState(false);
 const [recomendacion, setRecomendacion] = useState('');
 
 useEffect(() => {
